@@ -1,0 +1,11 @@
+@import 'titles.scss';
+@import 'navbar.scss';
+@import 'blogs.scss';
+
+a {
+  text-decoration: none; /* no underline */;
+  color: rgb(106, 41, 41);
+  &:hover {
+    color: red;
+  }
+}
