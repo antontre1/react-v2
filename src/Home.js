@@ -15,13 +15,19 @@ const Home = () => {
   }
 
   useEffect(() => {
-    console.log('use effect ran !')
-    console.log(name)
-  }, [name])
+    fetch('http://localhost:8000/blogs')
+      .then(res => {
+        return res.json()
+      })
+      .then((data) => {
+        console.log(data)
+        setBlogs(data)
+      })
+  }, [])
 
   return (
     <div className="home">
-      <Bloglist blogs={blogs} title={ "All blogs" } handleDelete={ handleDelete } />
+      {blogs && <Bloglist blogs={blogs} title={ "All blogs" } handleDelete={ handleDelete } />}
       <button onClick={() => setName('luigi')}>update name</button>
     </div>
    );
