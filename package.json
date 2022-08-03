@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "PORT=8080 react-scripts start",
+    "apiserver": "npx json-server --watch data/db.json --port 8000",
     "dev": "webpack serve",
     "build": "webpack"
   },

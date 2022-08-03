@@ -3,12 +3,7 @@ import Bloglist from './Bloglist';
 
 const Home = () => {
 
-  const [blogs, setBlogs] = useState([
-    {title: 'My First Blog', body: 'Lorem, ipsum dolor...', author: 'mario', id: 1},
-    {title: 'My luigi Blog', body: 'Lorem, ipsum dolor...', author: 'luigi', id: 2},
-    {title: 'My Yoknify Blog', body: 'Lorem, ipsum dolor...', author: 'yoshi', id: 3},
-    {title: 'My 2nd Yoknify Blog', body: 'Lorem, ipsum dolor...', author: 'mario', id: 4}
-  ])
+  const [blogs, setBlogs] = useState(null)
 
   const [name, setName] = useState('mario')
 
